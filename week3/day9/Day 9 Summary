@@ -1,0 +1,26 @@
+JavaScript Functions - recurring block of codes that can be called repeatedly
+
+Object - 
+
+Building simple JavaScript Applications
+
+Learn to psudocode
+
+Functions
+
+New command is introduced: push. The command adds a new item to an array and returns the new array length.
+
+array.push(variable)
+
+Function is a block of codes that may be called and used repeatedly. The basic syntex of the function is as follows: 
+
+function 'name of the function'('argument') { 'block of codes'}
+
+As we do exercises, we are introduced to another command typeof which checks whether variables are nubers, strings, or booleans.
+
+An object is a collection of properties, each of which is an association between a key and a value. It is a useful way of arranging data and relating items that would otherwise be listed in separate arrays. When a variable is declared as an object, it is to be written by the following syntex:
+var 'object name' = {'key 1' : 'value 1', 'key 2' : 'value 2', ...}
+The value may be called upon using the following syntex:
+'object name'['key #']
+
+Finally, one needs to pay a close attention to where one declares and defines variables, since declaring variables in wrong places may cause scoping issues.

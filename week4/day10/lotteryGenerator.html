@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Random</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="text-center">Generate a Random Number!</h1>
+
+    <div class="text-center">
+
+      <!-- Here we have our button for generating random numbers (#random-button) -->
+      <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-question-sign"></span></h1></button>
+      
+    </div>
+
+  </div>
+
+  <!-- Here we have div called "random-number" where our random number will go -->
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+  
+    $(document).ready(function() {
+      
+
+      $("#random-button").on("click", function() {
+        var lottoNumber = "";
+        for(i = 0; i < 9; i++) {
+          var number = Math.floor(Math.random() * 9) + 1;
+          lottoNumber = number + lottoNumber;
+        }
+        $("#random-number").prepend("<hr><br>" + lottoNumber);
+      });
+    });
+  //In the solution the command 'prepend' has been used, and I have not fully understood what the rationale behind it was. Let's skip it for now.
+
+    
+
+  
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+	<div id="game">
+		<h1>Car Adventures!</h1>
+		<h2>Thpe "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.</h2>
+		<h2>See console for car stats.</h2>
+	</div>
+
+<script type="text/javascript">
+	//Set the variable. The variable should be an object containing the car's stats, and functions. The functions should include: driveToWork, driveAroundWorld, getTuneUp, honk, reWriteStats
+
+	var car = {
+		make: "Honda",
+		model: "Fit",
+		color: "Blue Raspberry",
+		mileage: 3000,
+		isWorking: true,
+
+		driveToWork: function() {
+			alert("Old Mileage: " + this.mileage);
+			this.mileage = this.mileage+8;
+			alert("New mileage: " + this.mileage);
+		},
+
+		driveAroundWorld: function() {
+			alert("Old Mileage: " + this.mileage);
+			this.mileage= this.mileage + 24000;
+			alert("New mileage: " + this.mileage);
+			alert("Car needs a tuneup!");
+			this.isWorking = false;
+
+		}, 
+
+		getTuneUp: function() {
+			alert("Car is ready to go!");
+			this.isWorking = true;
+		},
+
+		honk : function() {
+			alert("Honk! Honk!");
+		},
+
+		reWriteStats: function() {
+			console.log("Make: " + this.make);
+			console.log("Model: " + this.model);
+			console.log("Color: " + this.color);
+			console.log("Mileage: " + this.mileage);
+			console.log("Is Working: " + this.isWorking);
+			console.log("------------------------------------");
+		}
+	};
+
+	document.onkeyup = function(event) {
+		var letter = String.fromCharCode(event.keyCode).toLowerCase();
+
+		if (letter === "h") {
+			car.honk();
+			car.reWriteStats();
+		}
+
+		if (letter === "w") {
+			car.driveAroundWorld();
+			car.reWriteStats();
+		}
+		if (letter === "t") {
+			car.getTuneUp();
+			car.reWriteStats()
+		}
+		if (letter === "d") {
+			car.driveToWork();
+			car.reWriteStats();
+		}
+	};
+	//So, what is the lesson here, this could be a very practical application of an object, especially when you are trying to design a game with different control keys.
+</script>	
+</body>
+</html>

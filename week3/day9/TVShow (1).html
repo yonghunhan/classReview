@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Favorite TV Shows</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // variables are declaired; favTV shows is an array with unspecified contents, and tvShow is an undefined variable. 
+      var favTVshows = [];
+      var tvShow;
+
+      // For Loop Elements Repeats 3 Times
+      for (var i = 1; i < 4; i++) {
+
+        // for tVShow, a message pops up, What is your # (number here) favorite TV show?
+        tvShow = prompt("What's your #" + i + " favorite TV show?");
+
+        // The command push adds a new item to an array. So whatever the answer was for the above question, the answer is added as a new item to the array favTVShow.
+        favTVshows.push(tvShow);
+      }
+
+      // 
+      for (var j = 0; j < favTVshows.length; j++) {
+
+        // For each item above, the command instructs the page to display them one by one.
+        alert(favTVshows[j]);
+      }
+
+    </script>
+
+  </body>
+</html>

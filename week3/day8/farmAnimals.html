@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Looping Through Arrays</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+      // Creating an array of vegetables.
+      var farmAnimals = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+      // Looping through each item in the array and logging a message to the console.
+      //condition, then action. set variables. set upper limit. set increment. 
+
+      for(i = 0; i < farmAnimals.length; i++) {
+          console.log(farmAnimals[i])
+      };
+
+      //Loop. for a given i, check if the item starts with a c or o. 
+      //use if then atatement to check the starting letter for each farmAnimals[i]
+
+      for(i = 0; i < farmAnimals.length; i++) {
+        if(farmAnimals[i].charAt(0) === "c" || farmAnimals[i].charAt(0) === "o") {
+          alert(farmAnimals[i] + " starts with c or an o!")
+        };
+      };
+
+    </script>
+    
+  </body>
+</html>
